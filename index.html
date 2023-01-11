@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
+    <nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light">
       <div class="container">
-        <a href="#" class="navbar-brand mb-0 h1">My Portfolio</a>
+        <a href="" class="navbar-brand mb-0 h1">My Portfolio</a>
         <button
           type="button"
           data-bs-toggle="collapse"
@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse" id="navbarId">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a href="#about" class="nav-link active">About Me</a>
+              <a href="#about" class="nav-link">About Me</a>
             </li>
             <li class="nav-item">
               <a href="#projects" class="nav-link">Projects</a>
@@ -55,53 +55,122 @@
         </div>
       </div>
     </nav>
-    <main class="pt-from-navbar">
+    <main>
       <div class="container">
         <section id="about">
+          <h1>Intro</h1>
+          <p>
+            Hi! I would like to introduce myself. My name is Máté and this is my
+            self-made portfolio page. I suppose you navigated here, because you
+            saw this somewhere online. If you carry on, you will get a present
+            at the end of the page.<br />
+            Have a good time!
+          </p>
           <h2>About Me</h2>
-          <h4>In general</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel
-            orci consectetur, rhoncus metus at, lacinia nulla. Maecenas massa
-            neque, mattis ut commodo id, vestibulum in enim. Pellentesque
-            aliquet enim ornare orci ullamcorper, eget auctor sapien accumsan.
-            Maecenas porttitor, diam id accumsan venenatis, mi turpis luctus
-            neque, sed malesuada neque est vitae ipsum. Curabitur libero eros,
-            gravida in commodo a, aliquam in lectus. Fusce vehicula vulputate
-            ipsum at bibendum. Proin ornare, sapien a cursus euismod, libero
-            metus malesuada massa, vel sodales nulla augue vitae nibh. Phasellus
-            mauris quam, pellentesque eget pretium a, lobortis et sem. Proin
-            eleifend vestibulum accumsan.
-          </p>
-          <h4>Education</h4>
-          <p>
-            But I must explain to you how all this mistaken idea of denouncing
-            pleasure and praising pain was born and I will give you a complete
-            account of the system, and expound the actual teachings of the great
-            explorer of the truth, the master-builder of human happiness. No one
-            rejects, dislikes, or avoids pleasure itself, because it is
-            pleasure, but because those who do not know how to pursue pleasure
-            rationally encounter consequences that are extremely painful. Nor
-            again is there anyone who loves or pursues or desires to obtain pain
-            of itself, because it is pain, but because occasionally
-            circumstances occur in which toil and pain can procure him some
-            great pleasure.
-          </p>
-          <h4>Skills</h4>
-          <p>
-            Quisque posuere tempus libero, ac efficitur mauris suscipit sit
-            amet. Duis auctor dui in nisl ornare, at luctus lacus malesuada.
-            Vivamus molestie dui et erat varius condimentum. Nam eget felis eget
-            augue egestas tincidunt. Pellentesque eu facilisis nunc. Vestibulum
-            pharetra sollicitudin felis quis iaculis. Fusce varius eros porta
-            metus dictum pellentesque. Ut et odio id dui tempus euismod eget et
-            sem. Ut feugiat cursus ultricies. Sed rutrum dolor sem, vel bibendum
-            lorem euismod quis. Etiam elementum imperdiet velit nec dictum.
-            Nullam lectus massa, feugiat id arcu vitae, feugiat euismod purus.
-            Proin tincidunt turpis a fringilla porta. Donec fermentum purus
-            vitae dolor convallis interdum. Proin eget massa eu nunc lacinia
-            porta eget ut mauris.
-          </p>
+          <!-- In General -->
+          <div class="card mb-3" style="max-width: 1000px">
+            <div class="row g-0">
+              <div class="col-lg-4">
+                <img
+                  src="img\general.jpg"
+                  class="img-fluid rounded-start"
+                  alt="general"
+                />
+              </div>
+              <div class="col-lg-8">
+                <div class="card-body">
+                  <h5 class="card-title">In General</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    finibus elit nec est dignissim viverra. Cras eu urna vitae
+                    velit ultricies vehicula. Morbi dignissim, libero sit amet
+                    rutrum convallis, nisi velit pulvinar diam, aliquet
+                    ultricies velit odio eu quam. Maecenas rhoncus, ligula
+                    fringilla bibendum dictum, tortor neque ullamcorper nulla,
+                    fermentum efficitur mauris quam sed ante. Suspendisse vitae
+                    est commodo, consectetur dui eu, luctus dui. Morbi mattis
+                    velit eu est convallis sodales. Etiam luctus ac enim non
+                    maximus.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Education -->
+          <div class="row">
+            <div class="col-lg-6 offset-lg-6">
+              <div class="card mb-3" style="max-width: 750px">
+                <div class="row g-0">
+                  <div class="col-lg-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Education</h5>
+                      <p class="card-text">
+                        Fusce nisl massa, ullamcorper vel tincidunt non,
+                        fringilla sed nisl. In lacinia nisi at tellus lacinia
+                        mollis. Duis lacinia, est id euismod vestibulum, justo
+                        justo semper mauris, vel eleifend mauris neque nec erat.
+                        Morbi mattis velit eu est convallis sodales. Etiam
+                        luctus ac enim non maximus.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <img
+                      src="img\education.jpg"
+                      class="img-fluid rounded-start"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Experience -->
+          <div class="card mb-3" style="max-width: 1000px">
+            <div class="row g-0">
+              <div class="col-lg-3">
+                <img
+                  src="img\exp.jpg"
+                  class="img-fluid rounded-start"
+                  alt="general"
+                />
+              </div>
+              <div class="col-lg-9">
+                <div class="card-body">
+                  <h5 class="card-title">Experience</h5>
+                  <p class="card-text">
+                    Nullam ac sem ullamcorper, egestas enim a, egestas risus.
+                    Proin et purus porta, convallis nulla vel, viverra elit.
+                    Duis ultrices massa non luctus iaculis. In ultricies, quam a
+                    finibus tincidunt, nunc magna iaculis est, vitae viverra sem
+                    dui quis tellus.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Skills -->
+          <div class="card text-center">
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="true" href="#"
+                    >Work</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">School</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Self-learnt</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Skills</h5>
+              <p class="card-text">Support text will go here. <br />Brrrrr.</p>
+            </div>
+          </div>
         </section>
       </div>
       <div class="container">
@@ -110,7 +179,10 @@
           <ul>
             <li>Here'll be a Pizza restaurant website project</li>
             <li>Maybe I'll do some data science</li>
-            <li>I would like this part to be horizontal</li>
+            <li>
+              I would like this part to be horizontal swipeable cards next to
+              each other
+            </li>
           </ul>
         </section>
       </div>
@@ -132,6 +204,13 @@
       </div>
     </main>
     <footer>
+      <p>
+        Thank you for getting this far! The present I promised, you've already
+        gotten. You got to know another human being in your lifetime. People
+        should appreciate these kind of little things in life, because you only
+        got 1. So, if you want this relationship to be two-way, you should
+        contact me when you're done here. Bye!
+      </p>
       <p>Copyright 2023</p>
     </footer>
     <script
