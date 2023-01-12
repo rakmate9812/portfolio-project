@@ -12,8 +12,21 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      defer
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="script.js"></script>
   </head>
   <body>
+    <!-- <nav class="navbar navbar-expand-sm bg-secondary navbar-dark sticky-top justify-content-center"></nav> -->
     <nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light">
       <div class="container">
         <a href="" class="navbar-brand mb-0 h1">My Portfolio</a>
@@ -70,6 +83,8 @@
             Have a good time!
           </p>
         </section>
+      </div>
+      <div class="container">
         <section id="about">
           <h2>About Me</h2>
           <!-- In General -->
@@ -155,8 +170,11 @@
             </div>
           </div>
         </section>
+      </div>
+      <div class="container">
         <section id="skills">
           <h2>Skills</h2>
+          <!-- Tab navigation -->
           <div class="card text-center">
             <div class="card-header">
               <ul class="nav nav-tabs card-header-tabs">
@@ -182,93 +200,72 @@
                 </li>
               </ul>
             </div>
-            <div class="card-body d-flex justify-content-between">
-              <!-- <p class="card-text">
-                Intro text to skills when nothing is chosen will go here.
-                <br />Brrrrr.
-              </p> -->
-              <div
-                class="card text-dark bg-light mb-3"
-                style="max-width: 18rem"
-              >
-                <div class="card-header">Header 1</div>
-                <div class="card-body">
-                  <h5 class="card-title">Title 1</h5>
-                  <p class="card-text">
-                    Suspendisse vitae est commodo, consectetur dui eu, luctus
-                    dui.
-                  </p>
+            <div class="card-body justify-content-between">
+              <!-- Card deck -->
+              <div class="row"></div>
+              <div class="row card-deck-sortable">
+                <!-- Card -->
+                <div class="col-auto">
+                  <div
+                    class="card text-dark bg-light mb-4"
+                    style="max-width: 18rem"
+                  >
+                    <div class="card-header h5">Title 1</div>
+                    <div class="card-body">
+                      <p class="card-text">
+                        Suspendisse vitae est commodo, consectetur dui eu,
+                        luctus dui.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card -->
+                <div class="col-auto">
+                  <div
+                    class="card text-dark bg-light mb-4"
+                    style="max-width: 18rem"
+                  >
+                    <div class="card-header h5">Title 1</div>
+                    <div class="card-body">
+                      <p class="card-text">
+                        Suspendisse vitae est commodo, consectetur dui eu,
+                        luctus dui.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card -->
+                <div class="col-auto">
+                  <div
+                    class="card text-dark bg-light mb-4"
+                    style="max-width: 18rem"
+                  >
+                    <div class="card-header h5">Title 1</div>
+                    <div class="card-body">
+                      <p class="card-text">
+                        Suspendisse vitae est commodo, consectetur dui eu,
+                        luctus dui.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card -->
+                <div class="col-auto">
+                  <div
+                    class="card text-dark bg-light mb-4"
+                    style="max-width: 18rem"
+                  >
+                    <div class="card-header h5">Title 1</div>
+                    <div class="card-body">
+                      <p class="card-text">
+                        Suspendisse vitae est commodo, consectetur dui eu,
+                        luctus dui.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div
-                class="card text-dark bg-light mb-3"
-                style="max-width: 18rem"
-              >
-                <div class="card-header">Header 2</div>
-                <div class="card-body">
-                  <h5 class="card-title">Title 2</h5>
-                  <p class="card-text">
-                    In ultricies, quam a finibus tincidunt, nunc magna iaculis
-                    est, vitae viverra sem dui quis tellus.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="card text-dark bg-light mb-3"
-                style="max-width: 18rem"
-              >
-                <div class="card-header">Header 3</div>
-                <div class="card-body">
-                  <h5 class="card-title">Title 3</h5>
-                  <p class="card-text">
-                    Proin et purus porta, convallis nulla vel, viverra elit.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="card text-dark bg-light mb-3"
-                style="max-width: 18rem"
-              >
-                <div class="card-header">Header 4</div>
-                <div class="card-body">
-                  <h5 class="card-title">Title 4</h5>
-                  <p class="card-text">
-                    Morbi dignissim, libero sit amet rutrum convallis, nisi
-                    velit pulvinar diam, aliquet ultricies velit odio eu quam.
-                  </p>
-                </div>
-              </div>
-              <!-- <div id="workskills">
-                <ul>
-                  <li>Workskill 1</li>
-                  <li>Workskill 2</li>
-                  <li>Workskill 3</li>
-                  <li>Workskill 4</li>
-                  <li>Workskill 5</li>
-                </ul>
-              </div>
-              <div id="schoolskills">
-                <ul>
-                  <li>Schoolskill 1</li>
-                  <li>Schoolskill 1</li>
-                  <li>Schoolskill 3</li>
-                </ul>
-              </div>
-              <div id="selflearntskills">
-                <ul>
-                  <li>Self-learnt skill 1</li>
-                  <li>Self-learnt skill 1</li>
-                  <li>Self-learnt skill 1</li>
-                </ul>
-              </div>
-              <div id="softskills">
-                <ul>
-                  <li>Softskill 1</li>
-                  <li>Softskill 2</li>
-                  <li>Softskill 3</li>
-                  <li>Softskill 4</li>
-                </ul>
-              </div> -->
             </div>
           </div>
         </section>
@@ -313,10 +310,5 @@
       </p>
       <p>Copyright 2023</p>
     </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>

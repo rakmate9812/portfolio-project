@@ -2,10 +2,11 @@ body {
   zoom: 110%;
 }
 
-/* h1 {
-  margin: 25px 25px 25px 0px;
+h1 {
+  padding-top: 60px;
+  margin: 0px 0px 25px 0px;
 }
 
 h2 {
-  margin: 20px;
-} */
+  padding-top: 60px;
+}
