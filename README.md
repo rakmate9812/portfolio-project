@@ -6,4 +6,4 @@ I started this self-made project after watching, learning and practicing a lot o
 
 Project starting date: 2023. Jan. 09.
 
-Current state:
+Current state: Swipeable info box implementing, Collecting, resizing, cropping images (not including yet)
