@@ -10,3 +10,8 @@ h1 {
 h2 {
   padding-top: 60px;
 }
+
+.project-images {
+  filter: blur(8px);
+  -webkit-filter: blur(3px);
+}

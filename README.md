@@ -6,4 +6,4 @@ I started this self-made project after watching, learning and practicing a lot o
 
 Project starting date: 2023. Jan. 09.
 
-Current state: Customizing Mobile layout implementing, a bit of jQuery for card sorting, brainstorming
+Current state:
