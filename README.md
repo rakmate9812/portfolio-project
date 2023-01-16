@@ -6,4 +6,4 @@ I started this self-made project after watching, learning and practicing a lot o
 
 Project starting date: 2023. Jan. 09.
 
-Current state: Connecting to an other desktop, version control, footer editing
+Current state: Nav + footer editing, redefining grid system

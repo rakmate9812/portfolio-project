@@ -15,3 +15,7 @@ h2 {
   filter: blur(8px);
   -webkit-filter: blur(3px);
 }
+
+.bg-nav-foot {
+  background-color: rgb(240, 238, 238);
+}
