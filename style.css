@@ -3,10 +3,9 @@
 } */
 
 body {
-  zoom: 110%;
   background-image: url("img/bg.jpg");
   background-repeat: no-repeat;
-  background-size: auto 150%;
+  background-size: cover;
   background-position: center bottom;
   background-attachment: fixed;
 }
@@ -15,18 +14,20 @@ h2 {
   padding-top: 60px;
 }
 
-.project-images {
+.project_images {
   filter: blur(8px);
   -webkit-filter: blur(3px);
 }
 
-.bg-nav-foot {
-  background-color: rgb(240, 238, 238);
+.bg_nav_foot {
+  background-color: #245dda;
+  outline: solid 5px #386de0;
+  color: white;
 }
 
 .absolute_center {
   width: 800px;
-  height: 500px;
+  height: 600px;
   margin: auto;
   max-width: 100%;
   max-height: 100%;
