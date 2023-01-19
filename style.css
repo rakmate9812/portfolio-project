@@ -1,15 +1,13 @@
-.gridtest {
-  border-style: solid;
-  border-color: red;
+html {
+  font-family: "Segoe UI", sans-serif !important;
 }
+
+/* * {
+  outline: solid 1px red;
+} */
 
 body {
   zoom: 110%;
-}
-
-h1 {
-  margin-top: 200px;
-  margin-bottom: 60px;
 }
 
 h2 {
@@ -23,4 +21,13 @@ h2 {
 
 .bg-nav-foot {
   background-color: rgb(240, 238, 238);
+}
+
+.absolute_center {
+  width: 800px;
+  height: 500px;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
 }

@@ -25,10 +25,17 @@
       crossorigin="anonymous"
     ></script>
     <script defer src="script.js"></script>
+    <style>
+      body {
+        font-family: "Tahoma", "Arial", sans-serif !important;
+      }
+    </style>
   </head>
   <body>
     <!-- h Navbar -->
-    <nav class="navbar sticky-top navbar-expand-sm navbar-light bg-nav-foot">
+    <nav
+      class="navbar sticky-top navbar-expand-sm navbar-light bg-nav-foot mb-5"
+    >
       <div class="container">
         <a href="" class="navbar-brand mb-0 h1">My Portfolio</a>
         <button
@@ -76,15 +83,19 @@
       <!-- h1 Intro -->
       <div class="container">
         <section id="intro">
-          <h1>Intro</h1>
-          <div class="row mb-5">
-            <p>
-              Hi! I would like to introduce myself. My name is Máté and this is
-              my self-made portfolio page. I suppose you navigated here, because
-              you saw this somewhere online. If you carry on, you will get a
-              present at the end of the page.<br />
-              Have a good time!
-            </p>
+          <div
+            class="d-flex align-items-center justify-content-center absolute_center"
+          >
+            <div class="card p-4" style="max-width: 1000px">
+              <h1>Intro</h1>
+              <p>
+                Hi! I would like to introduce myself. My name is Máté and this
+                is my self-made portfolio page. I suppose you navigated here,
+                because you saw this somewhere online. If you carry on, you will
+                get a present at the end of the page.<br />
+                Have a good time!
+              </p>
+            </div>
           </div>
         </section>
       </div>
@@ -414,7 +425,7 @@
                     aria-label="Slide 2"
                   ></button>
                 </div>
-                <div class="carousel-inner row">
+                <div class="carousel-inner">
                   <!-- Slide -->
                   <div class="carousel-item active">
                     <img
@@ -466,6 +477,7 @@
                 </button>
               </div>
             </div>
+            <div class="col-sm-1"></div>
           </div>
         </section>
       </div>
