@@ -1,13 +1,14 @@
-html {
-  font-family: "Segoe UI", sans-serif !important;
-}
-
 /* * {
   outline: solid 1px red;
 } */
 
 body {
   zoom: 110%;
+  background-image: url("img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 150%;
+  background-position: center bottom;
+  background-attachment: fixed;
 }
 
 h2 {
