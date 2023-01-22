@@ -1,4 +1,4 @@
-// Decided to skip OOP because of this project's small size
+// Decided to skip OOP because of the small size of the project
 "use strict";
 // console.log($);
 
@@ -7,7 +7,15 @@ const skillTab = document.querySelector(".skill__tabs__container");
 const tabs = document.querySelectorAll(".skill__tab");
 const skillDeck = document.querySelector(".skill__deck__container");
 const decks = document.querySelectorAll(".skill__deck");
+const intro = document.getElementById("intro");
 // ///////////////////////////////////////////////////////////////////
+
+// Intro Fade-in
+document.addEventListener("scroll", function () {
+  if (window.scrollY > 1) {
+    intro.classList.add("fade-in");
+  }
+});
 
 // Tabulated "Skills" component
 skillTab.addEventListener("click", function (e) {
@@ -30,5 +38,5 @@ skillTab.addEventListener("click", function (e) {
 
 // Sortable skill cards
 $(".card-deck-sortable").sortable({
-  connectWith: ".carddeck",
+  connectWith: ".skill_deck",
 });

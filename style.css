@@ -27,9 +27,18 @@ h2 {
 
 .absolute_center {
   width: 800px;
-  height: 600px;
+  height: 100vh;
   margin: auto;
   max-width: 100%;
   max-height: 100%;
   overflow: auto;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.fade-in {
+  opacity: 1;
 }
