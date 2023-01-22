@@ -8,6 +8,7 @@ const tabs = document.querySelectorAll(".skill__tab");
 const skillDeck = document.querySelector(".skill__deck__container");
 const decks = document.querySelectorAll(".skill__deck");
 const intro = document.getElementById("intro");
+const todayDate = document.getElementById("today");
 // ///////////////////////////////////////////////////////////////////
 
 // Intro Fade-in
@@ -40,3 +41,24 @@ skillTab.addEventListener("click", function (e) {
 $(".card-deck-sortable").sortable({
   connectWith: ".skill_deck",
 });
+
+// Today date insert into span
+let today = new Date();
+let monthNamesEng = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+let month = monthNamesEng[today.getMonth()];
+let year = today.getFullYear();
+let date = month + ", " + year; // "January, 2023"
+todayDate.innerHTML = date;

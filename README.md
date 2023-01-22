@@ -6,4 +6,4 @@ I started this self-made project after watching, learning and practicing a lot o
 
 Project starting date: 2023. Jan. 09.
 
-Current state: Customizing background, navbar, font, grid
+Current state: Implementing some transitions, working with dates, updating dummy text fields with real text
