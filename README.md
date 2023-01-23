@@ -6,4 +6,4 @@ I started this self-made project after watching, learning and practicing a lot o
 
 Project starting date: 2023. Jan. 09.
 
-Current state: Implementing some CSS transitions, working with dates, updating content
+Current state: Redesigning, rounding everything, repairing the grid system
