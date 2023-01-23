@@ -39,7 +39,7 @@
       <div class="container">
         <a
           href=""
-          class="navbar-brand mb-0 h1 fst-italic p-2 bg-success rounded"
+          class="navbar-brand mb-0 h1 fst-italic p-2 bg-success rounded_edges"
           >my Portfolio</a
         >
         <button
@@ -88,15 +88,14 @@
       <div class="container">
         <section id="intro" class="hidden">
           <div
-            class="d-flex align-items-center justify-content-center absolute_center"
+            class="d-flex align-items-center justify-content-center intro_position"
           >
             <div class="card p-4" style="max-width: 1000px">
               <h1>Intro</h1>
               <p>
                 Hi! I would like to introduce myself. My name is Máté and this
                 is my self-made portfolio page. Thank you for navigating here.
-                If you carry on, you will get a small present at the end of the
-                page.<br /><br />
+                If you carry on, you will get a small present at the end.<br /><br />
                 Have a good time!
               </p>
             </div>
@@ -104,9 +103,8 @@
         </section>
       </div>
       <!-- h2 About -->
-      <div class="container">
+      <div class="custom_margintop container">
         <section id="about">
-          <h2>About</h2>
           <!-- In General -->
           <div class="card mb-5 border-dark" style="max-width: 800px">
             <div class="row g-0">
@@ -179,10 +177,10 @@
                     I started working as a Trainee at a nice, small, family like
                     company as a manual tester in February, 2022. After I got my
                     degree, I got hired as a Junior Sharepoint developer, and
-                    started working full-time in September, 2022. I learnt a
-                    lots of various things about web-development, and worked
-                    with a lots of different technology types. I still work for
-                    this company now, as of <span id="today"></span>.
+                    started working full-time in September, 2022. I learnt lots
+                    of various things about web-development, and worked with
+                    different technology types. I still work for this company
+                    now, as of <span id="today"></span>.
                   </p>
                 </div>
               </div>
@@ -191,30 +189,43 @@
         </section>
       </div>
       <!-- h2 Skills -->
-      <div class="container">
+      <div class="custom_margintop container">
         <section id="skills">
-          <h2>Skills</h2>
           <!-- Tab navigation -->
           <div class="card text-center">
             <div class="card-header">
               <ul class="nav nav-tabs card-header-tabs skill__tabs__container">
                 <li class="nav-item">
-                  <a class="nav-link active skill__tab" href="#" data-tab="1"
+                  <a
+                    class="nav-link active skill__tab rounded_top_edges"
+                    href="#"
+                    data-tab="1"
                     >Work</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link skill__tab" href="#" data-tab="2"
+                  <a
+                    class="nav-link skill__tab rounded_top_edges"
+                    href="#"
+                    data-tab="2"
                     >School</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link skill__tab" href="#" data-tab="3"
+                  <a
+                    class="nav-link skill__tab rounded_top_edges"
+                    href="#"
+                    data-tab="3"
                     >Self-learnt</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link skill__tab" href="#" data-tab="4">Soft</a>
+                  <a
+                    class="nav-link skill__tab rounded_top_edges"
+                    href="#"
+                    data-tab="4"
+                    >Soft</a
+                  >
                 </li>
               </ul>
             </div>
@@ -441,9 +452,8 @@
         </section>
       </div>
       <!-- h2 Projects -->
-      <div class="container">
+      <div class="custom_margintop container">
         <section id="projects">
-          <h2>Projects</h2>
           <div class="row">
             <div class="col-sm-1"></div>
             <div class="col-sm-10 d-flex justify-content-center">
@@ -469,7 +479,7 @@
                     aria-label="Slide 2"
                   ></button>
                 </div>
-                <div class="carousel-inner">
+                <div class="carousel-inner rounded_edges">
                   <!-- Slide -->
                   <div class="carousel-item active">
                     <img
@@ -526,9 +536,46 @@
         </section>
       </div>
       <!-- h2 Contact -->
-      <div class="container">
+      <div class="custom_margintop container">
         <section id="contact">
-          <h2>Contact</h2>
+          <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Send me an e-mail</h5>
+                  <a href="#" class="btn btn-primary">Reveal</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Contact me on LinkedIn</h5>
+                  <a
+                    href="https://www.linkedin.com/in/m%C3%A1t%C3%A9-r%C3%A1k-1210ab22b/"
+                    class="btn btn-primary"
+                    >Link to go</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Jump to my Github</h5>
+                  <a
+                    href="https://github.com/rakmate9812"
+                    class="btn btn-primary"
+                    >Leave</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-1"></div>
+          </div>
+          <!-- h2 Contact -->
+          <!-- <h2>Contact</h2>
           <p>You can contact me via</p>
           <div class="col-sm-4"></div>
           <ul class="list-group list-group-flush">
@@ -542,7 +589,7 @@
                 >Máté Rák</a
               >
             </li>
-          </ul>
+          </ul> -->
         </section>
       </div>
     </main>
