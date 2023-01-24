@@ -1,6 +1,6 @@
-* {
+/* * {
   outline: solid 1px red;
-}
+} */
 
 body {
   font-family: "Tahoma", sans-serif !important;
@@ -29,7 +29,6 @@ section {
   background: linear-gradient(to right, #2157ce, #386de0);
   outline: solid 5px #386de0;
   color: white;
-  font-size: larger;
 }
 
 .intro_style {
@@ -80,6 +79,7 @@ section {
 
 .nav__link {
   position: relative;
+  font-size: large;
 }
 
 .nav__link::after {
@@ -109,7 +109,7 @@ section {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   transition: all 0.3s ease-in-out;
 }
 
