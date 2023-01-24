@@ -24,18 +24,20 @@ body {
   background-color: #245dda;
   outline: solid 5px #386de0;
   color: white;
+  font-size: larger;
 }
 
-.intro_position {
+.intro_style {
   max-width: 600px;
   min-height: 80vh;
   margin: auto;
   padding: 10px;
+  font-size: larger;
 }
 
 .hidden {
   opacity: 0;
-  transition: opacity 2s;
+  transition: opacity 1.5s;
 }
 
 .fade-in {
