@@ -9,10 +9,15 @@ body {
   background-size: cover;
   background-position: center bottom;
   background-attachment: fixed;
+  backdrop-filter: blur(4px);
 }
 
 .custom_margintop {
-  margin-top: 40vh;
+  margin-top: 30vh;
+}
+
+section {
+  padding-top: 100px;
 }
 
 .project_images {
@@ -21,7 +26,7 @@ body {
 }
 
 .bg_nav_foot {
-  background-color: #245dda;
+  background: linear-gradient(to right, #2157ce, #386de0);
   outline: solid 5px #386de0;
   color: white;
   font-size: larger;
@@ -29,7 +34,7 @@ body {
 
 .intro_style {
   max-width: 600px;
-  min-height: 80vh;
+  min-height: 60vh;
   margin: auto;
   padding: 10px;
   font-size: larger;
@@ -37,7 +42,7 @@ body {
 
 .hidden {
   opacity: 0;
-  transition: opacity 1.5s;
+  transition: opacity 1s;
 }
 
 .fade-in {
@@ -47,11 +52,14 @@ body {
 .card {
   transition: box-shadow 0.3s ease;
   box-shadow: none;
-  border-radius: 25px;
 }
 
 .card:hover {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.card__background {
+  background: linear-gradient(to right, #d1e0ff, #5384ed);
 }
 
 .rounded_edges {

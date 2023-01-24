@@ -10,6 +10,8 @@ const decks = document.querySelectorAll(".skill__deck");
 const intro = document.getElementById("intro");
 const todayDate = document.getElementById("today");
 const sections = document.querySelectorAll("section");
+const popoverBtn = document.querySelector(".popover__btn");
+const navItems = document.querySelectorAll(".nav__link");
 // ///////////////////////////////////////////////////////////////////
 
 // Intro Fade-in
@@ -19,18 +21,37 @@ const sections = document.querySelectorAll("section");
 //   }
 // });
 
-// Intersection Observer API - Sections fading in - needs to be reworked
-const observer = new IntersectionObserver((entries) => {
+const obsCallback = function (entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      console.log(entry.target.intersectionRatio);
+      // console.log(entry.target.id);
       entry.target.classList.add("fade-in");
-      console.log(entry.target);
+      // Loop needed
+      // console.log(navItems[0].textContent);
+      observer.unobserve(entry.target);
     }
   });
-});
+};
+const obsOptions = {
+  root: null,
+  threshold: 0.3,
+};
+
+const observer = new IntersectionObserver(obsCallback, obsOptions);
 sections.forEach((sec) => observer.observe(sec));
 
+// // Intersection Observer API - Sections fading in - needs to be reworked
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     // console.log(entry.intersectionRatio);
+//     // console.log(entry.target.id);
+//     // if (entry.intersectionRatio >= 0.1) {
+//     //   console.log(entry.target);
+//     // }
+//   });
+// });
+// sections.forEach((sec) => (observer.observe(sec) ? observer.disconnect() : ""));
+// observer.observe;
 // Tabulated "Skills" component
 skillTab.addEventListener("click", function (e) {
   e.preventDefault();
@@ -50,11 +71,6 @@ skillTab.addEventListener("click", function (e) {
   decks[+clicked.dataset.tab - 1].classList.remove("d-none");
 });
 
-// Sortable skill cards
-$(".card-deck-sortable").sortable({
-  connectWith: ".skill_deck",
-});
-
 // Today date insert into span
 const formattedDate = function () {
   // prettier-ignore
@@ -65,3 +81,36 @@ const formattedDate = function () {
   return month + ", " + year;
 };
 todayDate.innerHTML = formattedDate();
+
+// Sortable skill cards
+$(".card-deck-sortable").sortable({
+  connectWith: ".skill_deck",
+});
+
+// Popovers enabling
+const popoverTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="popover"]'
+);
+const popoverList = [...popoverTriggerList].map(
+  (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+);
+
+// E-mail copy to clipboard, popover hiding
+popoverBtn.addEventListener("click", function () {
+  navigator.clipboard.writeText("rakmate9812@gmail.com").then(
+    function () {
+      $(".popover__btn").popover("show");
+      setTimeout(function () {
+        $(".popover__btn").popover("hide");
+      }, 1000);
+    },
+    function () {
+      alert("Something went wrong!");
+    }
+  );
+
+  $(".popover__btn").popover("show");
+  setTimeout(function () {
+    $(".popover__btn").popover("hide");
+  }, 1000);
+});
