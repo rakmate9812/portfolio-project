@@ -9,6 +9,7 @@ const skillDeck = document.querySelector(".skill__deck__container");
 const decks = document.querySelectorAll(".skill__deck");
 const intro = document.getElementById("intro");
 const todayDate = document.getElementById("today");
+const about = document.getElementById("about");
 // ///////////////////////////////////////////////////////////////////
 
 // Intro Fade-in
@@ -43,22 +44,12 @@ $(".card-deck-sortable").sortable({
 });
 
 // Today date insert into span
-let today = new Date();
-let monthNamesEng = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-let month = monthNamesEng[today.getMonth()];
-let year = today.getFullYear();
-let date = month + ", " + year; // "January, 2023"
-todayDate.innerHTML = date;
+const formattedDate = function () {
+  // prettier-ignore
+  const monthNamesEng = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",];
+  const today = new Date();
+  const month = monthNamesEng[today.getMonth()];
+  const year = today.getFullYear();
+  return month + ", " + year;
+};
+todayDate.innerHTML = formattedDate();
