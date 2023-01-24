@@ -9,15 +9,27 @@ const skillDeck = document.querySelector(".skill__deck__container");
 const decks = document.querySelectorAll(".skill__deck");
 const intro = document.getElementById("intro");
 const todayDate = document.getElementById("today");
-const about = document.getElementById("about");
+const sections = document.querySelectorAll("section");
 // ///////////////////////////////////////////////////////////////////
 
 // Intro Fade-in
-document.addEventListener("scroll", function () {
-  if (window.scrollY > 1) {
-    intro.classList.add("fade-in");
-  }
+// document.addEventListener("scroll", function () {
+//   if (window.scrollY > 1) {
+//     intro.classList.add("fade-in");
+//   }
+// });
+
+// Intersection Observer API - Sections fading in - needs to be reworked
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log(entry.target.intersectionRatio);
+      entry.target.classList.add("fade-in");
+      console.log(entry.target);
+    }
+  });
 });
+sections.forEach((sec) => observer.observe(sec));
 
 // Tabulated "Skills" component
 skillTab.addEventListener("click", function (e) {
