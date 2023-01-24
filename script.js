@@ -21,14 +21,17 @@ const navItems = document.querySelectorAll(".nav__link");
 //   }
 // });
 
+// Sections fade in - Nav link gets active
 const obsCallback = function (entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      // console.log(entry.target.id);
       entry.target.classList.add("fade-in");
-      // Loop needed
-      // console.log(navItems[0].textContent);
-      observer.unobserve(entry.target);
+      navItems.forEach((item) => {
+        entry.target.id === item.textContent
+          ? item.classList.add("hover-class")
+          : item.classList.remove("hover-class");
+      });
+      // observer.unobserve(entry.target);
     }
   });
 };
@@ -40,18 +43,6 @@ const obsOptions = {
 const observer = new IntersectionObserver(obsCallback, obsOptions);
 sections.forEach((sec) => observer.observe(sec));
 
-// // Intersection Observer API - Sections fading in - needs to be reworked
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     // console.log(entry.intersectionRatio);
-//     // console.log(entry.target.id);
-//     // if (entry.intersectionRatio >= 0.1) {
-//     //   console.log(entry.target);
-//     // }
-//   });
-// });
-// sections.forEach((sec) => (observer.observe(sec) ? observer.disconnect() : ""));
-// observer.observe;
 // Tabulated "Skills" component
 skillTab.addEventListener("click", function (e) {
   e.preventDefault();
