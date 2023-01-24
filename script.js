@@ -99,9 +99,4 @@ popoverBtn.addEventListener("click", function () {
       alert("Something went wrong!");
     }
   );
-
-  $(".popover__btn").popover("show");
-  setTimeout(function () {
-    $(".popover__btn").popover("hide");
-  }, 1000);
 });
