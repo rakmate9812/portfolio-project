@@ -1,6 +1,6 @@
 /* * {
-  outline: solid 1px red;
-} */
+    outline: solid 1px red;
+  } */
 
 body {
   font-family: "Tahoma", sans-serif !important;
@@ -12,12 +12,12 @@ body {
   backdrop-filter: blur(4px);
 }
 
-section {
-  padding-top: 100px;
+.custom_margintop {
+  margin-top: 25vh;
 }
 
-.custom_margintop {
-  margin-top: 30vh;
+.section_padding {
+  padding-top: 100px;
 }
 
 .project_images {
@@ -26,8 +26,8 @@ section {
 }
 
 .bg_nav_foot {
-  background: linear-gradient(to right, #2157ce, #386de0);
-  outline: solid 5px #386de0;
+  background: linear-gradient(to left, #386de0, rgb(33, 87, 206));
+  outline: solid 5px rgb(33, 87, 206);
   color: white;
 }
 
@@ -82,6 +82,8 @@ section {
 
 .skill_card {
   max-width: 16rem;
+  min-height: 11rem;
+  text-align: center;
 }
 
 .nav__link {
@@ -123,4 +125,24 @@ section {
 .nav__link.hover-class {
   color: #fff;
   transition: all 0.3s ease-in-out;
+}
+
+.intro_bg {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.6) 20%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+
+.bottom_shadow {
+  background: linear-gradient(
+    to top,
+    rgba(33, 87, 206, 0.3) 25%,
+    rgba(0, 0, 0, 0) 75%
+  );
+}
+
+.about_bg {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
 }
