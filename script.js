@@ -107,7 +107,7 @@ emailPopoverBtn.addEventListener("click", function () {
   helperPopup("rakmate9812@gmail.com", "emailFooter");
 });
 
-// Button revealing phone number
+// Button revealing phone number, popover hiding
 phonePopoverBtn.addEventListener("click", function () {
   const phoneNum = "+36 20 123 1254";
   this.innerHTML = phoneNum;
