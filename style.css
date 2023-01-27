@@ -9,9 +9,11 @@ body {
   background-size: cover;
   background-position: center bottom;
   background-attachment: fixed;
-  backdrop-filter: blur(4px);
 }
 
+.blurred_backg {
+  backdrop-filter: blur(4px);
+}
 .custom_margintop {
   margin-top: 25vh;
 }
@@ -153,4 +155,12 @@ body {
   margin: 0 auto;
   top: 50%;
   transform: translateY(-10%);
+}
+.footer_icons {
+  color: #fff;
+}
+
+.footer_icons:hover {
+  color: bisque;
+  cursor: pointer;
 }
