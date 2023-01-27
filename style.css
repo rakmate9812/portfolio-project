@@ -33,6 +33,15 @@ body {
   color: white;
 }
 
+.intro_bg {
+  height: 100vh; /* always set when zoomed in */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.6) 20%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+
 .intro_style {
   max-width: 600px;
   min-height: 60vh;
@@ -129,14 +138,6 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.intro_bg {
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.6) 20%,
-    rgba(255, 255, 255, 0) 80%
-  );
-}
-
 .bottom_shadow {
   background: linear-gradient(
     to top,
@@ -163,4 +164,32 @@ body {
 .footer_icons:hover {
   color: bisque;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 3840px) {
+  body {
+    zoom: 220%;
+  }
+  .intro_style {
+    max-width: 600px;
+    min-height: 30vh;
+    margin: auto;
+  }
+  .intro_bg {
+    height: 22vh;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  body {
+    zoom: 160%;
+  }
+  .intro_style {
+    max-width: 600px;
+    min-height: 40vh;
+    margin: auto;
+  }
+  .intro_bg {
+    height: 60vh;
+  }
 }
