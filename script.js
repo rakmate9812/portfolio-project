@@ -12,7 +12,6 @@ const todayDate = document.getElementById("today");
 const sections = document.querySelectorAll("section");
 const navItems = document.querySelectorAll(".nav__link");
 const emailPopoverBtn = document.getElementById("emailFooter");
-const phonePopoverBtn = document.getElementById("phoneFooter");
 // ///////////////////////////////////////////////////////////////////
 
 // Intro Fade-in
@@ -88,30 +87,16 @@ const popoverList = [...popoverTriggerList].map(
 );
 
 // Helper popover function
-const helperPopup = function (copiedText, btnID) {
-  navigator.clipboard.writeText(copiedText).then(
-    function () {
-      $("#" + btnID).popover("show");
-      setTimeout(function () {
-        $("#" + btnID).popover("hide");
-      }, 1000);
-    },
-    function () {
-      alert("Something went wrong!");
-    }
-  );
+const helperPopup = function (btnID) {
+  $("#" + btnID).popover("show");
+  setTimeout(function () {
+    $("#" + btnID).popover("hide");
+  }, 1000);
 };
 
 // E-mail copy to clipboard, popover hiding
 emailPopoverBtn.addEventListener("click", function () {
-  helperPopup("rakmate9812@gmail.com", "emailFooter");
-});
-
-// Button revealing phone number, popover hiding
-phonePopoverBtn.addEventListener("click", function () {
-  const phoneNum = "+36 20 123 1254";
-  this.innerHTML = phoneNum;
-  this.disabled = true;
-  helperPopup(phoneNum, "phoneFooter");
-  setTimeout(() => (this.disabled = false), 1000);
+  navigator.clipboard
+    .writeText(copiedText)
+    .then(helperPopup("rakmate9812@gmail.com", "emailFooter"));
 });
