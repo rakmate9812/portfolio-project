@@ -12,6 +12,7 @@ const todayDate = document.getElementById("today");
 const sections = document.querySelectorAll("section");
 const navItems = document.querySelectorAll(".nav__link");
 const emailPopoverBtn = document.getElementById("emailFooter");
+const forkify = document.querySelector(".forkify__logo");
 // ///////////////////////////////////////////////////////////////////
 
 // Intro Fade-in
@@ -37,7 +38,7 @@ const obsCallback = function (entries, observer) {
 };
 const obsOptions = {
   root: null,
-  threshold: 0.3,
+  threshold: 0.4,
 };
 
 const observer = new IntersectionObserver(obsCallback, obsOptions);
@@ -99,4 +100,9 @@ emailPopoverBtn.addEventListener("click", function () {
   navigator.clipboard
     .writeText(copiedText)
     .then(helperPopup("rakmate9812@gmail.com", "emailFooter"));
+});
+
+// Navigating to my forkify app on click of the logo
+forkify.addEventListener("click", function () {
+  window.location.href = "https://rakmate9812-forkify.netlify.app/";
 });

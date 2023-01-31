@@ -15,7 +15,7 @@ body {
   backdrop-filter: blur(4px);
 }
 .custom_margintop {
-  margin-top: 25vh;
+  margin-top: 20vh;
 }
 
 .section_padding {
@@ -150,7 +150,8 @@ body {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
 }
 
-.forkify_logo {
+.forkify__logo {
+  cursor: pointer;
   width: 25%;
   display: block;
   margin: 0 auto;
