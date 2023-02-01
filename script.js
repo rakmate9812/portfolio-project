@@ -9,6 +9,7 @@ const skillDeck = document.querySelector(".skill__deck__container");
 const decks = document.querySelectorAll(".skill__deck");
 const intro = document.getElementById("intro");
 const todayDate = document.getElementById("today");
+const intersections = document.querySelectorAll(".intersection");
 const sections = document.querySelectorAll("section");
 const navItems = document.querySelectorAll(".nav__link");
 const emailPopoverBtn = document.getElementById("emailFooter");
@@ -22,29 +23,39 @@ const forkify = document.querySelector(".forkify__logo");
 //   }
 // });
 
-// Sections fade in - Nav link gets active
-const obsCallback = function (entries, observer) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("fade-in");
-      console.log(entry.target.id);
-
-      navItems.forEach((item) => {
-        entry.target.id === item.textContent
-          ? item.classList.add("hover-class")
-          : item.classList.remove("hover-class");
-      });
-      // observer.unobserve(entry.target);
-    }
-  });
-};
+// Sections fade in - Nav link gets active - with IntersectionObserver API
 const obsOptions = {
   root: null,
   threshold: 0.5,
 };
 
-const observer = new IntersectionObserver(obsCallback, obsOptions);
-sections.forEach((sec) => observer.observe(sec));
+const intersectionCB = function (entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("fade-in");
+      // console.log(entry.target.id);
+      observer.unobserve(entry.target);
+    }
+  });
+};
+
+const navSectionsCB = function (entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log(entry.target.id);
+      // item.target.id === item.textContent
+      // ? item.classList.add("hover-class")
+      // : item.classList.remove("hover-class");
+    }
+  });
+};
+
+// prettier-ignore
+const intersectionObserver = new IntersectionObserver(intersectionCB,obsOptions);
+intersections.forEach((intersec) => intersectionObserver.observe(intersec));
+
+const navSectionObserver = new IntersectionObserver(navSectionsCB, obsOptions);
+sections.forEach((intersec) => navSectionObserver.observe(intersec));
 
 // Tabulated "Skills" component
 skillTab.addEventListener("click", function (e) {
