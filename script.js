@@ -11,7 +11,7 @@ const intro = document.getElementById("intro");
 const todayDate = document.getElementById("today");
 const intersections = document.querySelectorAll(".intersection");
 const sections = document.querySelectorAll("section");
-const navItems = document.querySelectorAll(".nav__link");
+const navLinks = document.querySelectorAll(".nav__link");
 const emailPopoverBtn = document.getElementById("emailFooter");
 const forkify = document.querySelector(".forkify__logo");
 // ///////////////////////////////////////////////////////////////////
@@ -43,9 +43,11 @@ const navSectionsCB = function (entries) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       console.log(entry.target.id);
-      // item.target.id === item.textContent
-      // ? item.classList.add("hover-class")
-      // : item.classList.remove("hover-class");
+      navLinks.forEach((link) => {
+        entry.target.id === link.textContent
+          ? link.classList.add("hover-class")
+          : link.classList.remove("hover-class");
+      });
     }
   });
 };
