@@ -27,6 +27,8 @@ const obsCallback = function (entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("fade-in");
+      console.log(entry.target.id);
+
       navItems.forEach((item) => {
         entry.target.id === item.textContent
           ? item.classList.add("hover-class")
@@ -38,7 +40,7 @@ const obsCallback = function (entries, observer) {
 };
 const obsOptions = {
   root: null,
-  threshold: 0.4,
+  threshold: 0.5,
 };
 
 const observer = new IntersectionObserver(obsCallback, obsOptions);
@@ -97,9 +99,8 @@ const helperPopup = function (btnID) {
 
 // E-mail copy to clipboard, popover hiding
 emailPopoverBtn.addEventListener("click", function () {
-  navigator.clipboard
-    .writeText(copiedText)
-    .then(helperPopup("rakmate9812@gmail.com", "emailFooter"));
+  navigator.clipboard.writeText("rakmate9812@gmail.com");
+  helperPopup(emailPopoverBtn.id);
 });
 
 // Navigating to my forkify app on click of the logo
