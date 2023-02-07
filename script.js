@@ -120,3 +120,17 @@ emailPopoverBtn.addEventListener("click", function () {
 forkify.addEventListener("click", function () {
   window.location.href = "https://rakmate9812-forkify.netlify.app/";
 });
+
+const progressRing = document.querySelector(".progress-ring");
+const progressPercentage = progressRing.querySelector(
+  ".progress-ring__percentage"
+);
+
+// let currentPercentage = 0;
+
+// const updatePercentage = () => {
+//   currentPercentage = (currentPercentage + 1) % 101;
+//   progressPercentage.textContent = `${currentPercentage}%`;
+// };
+
+// setInterval(updatePercentage, 20);

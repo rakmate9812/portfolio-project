@@ -68,25 +68,21 @@
           <section id="intro" class="intersection hidden">
             <div class="d-flex align-items-center intro_style">
               <div class="card p-4 border-dark">
-                <div class="row">
-                  <div class="col-lg-6">
-                    <h1 class="">Intro</h1>
-                  </div>
-                  <div class="col-lg-6">
-                    <span class="d-flex justify-content-end">
-                      <img
-                        src="img/File.ico"
-                        alt="intro"
-                        style="max-width: 30px; max-height: 30px" />
-                    </span>
-                  </div>
-                  <p>
-                    Hi! I would like to introduce myself. My name is Máté, I'm a
-                    Junior Web Developer, and this is my self-made portfolio
-                    page. Thank you for navigating here.<br /><br />
-                    Have a good time!
-                  </p>
+                <div>
+                  <span class="text-start h1">Intro</span>
+                  <span class="float-end">
+                    <img
+                      src="img/File.ico"
+                      alt="intro"
+                      style="max-width: 30px; max-height: 30px" />
+                  </span>
                 </div>
+                <p>
+                  Hi! I would like to introduce myself. My name is Máté, I'm a
+                  Junior Web Developer, and this is my self-made portfolio page.
+                  Thank you for navigating here.<br /><br />
+                  Have a good time!
+                </p>
               </div>
             </div>
           </section>
@@ -187,8 +183,8 @@
           <!-- h2 Skills -->
           <div class="custom_margintop container">
             <section id="skills" class="intersection hidden section_padding">
-              <!-- Tab navigation -->
               <div class="card text-center very_rounded_edges">
+                <!-- Tab navigation -->
                 <div class="card-header bg-transparent">
                   <div class="row">
                     <div class="col-sm-6">
@@ -251,6 +247,7 @@
                     </div>
                   </div>
                 </div>
+                <!-- Card body -->
                 <div
                   class="card-body justify-content-center d-flex skill__deck__container">
                   <!-- Work card deck -->
@@ -261,7 +258,18 @@
                         class="card skill_card text-dark bg-light mb-4 very_rounded_edges">
                         <div class="card-header bg-transparent h5">
                           Sharepoint
+                          <div class="progress-ring">
+                            <div class="progress-ring__circle">
+                              <div class="progress-ring__circle__inner"></div>
+                              <div
+                                class="progress-ring__circle__inner__clipper"></div>
+                            </div>
+                            <div class="progress-ring__info">
+                              <p class="progress-ring__percentage"></p>
+                            </div>
+                          </div>
                         </div>
+
                         <div class="card-body d-flex">
                           <p class="card-text m-auto">
                             Creating, supporting modern Sharepoint DMS sites to
@@ -580,7 +588,7 @@
                     <div class="card-body">
                       <h5 class="card-title">My CV</h5>
                       <a
-                        href="https://drive.google.com/file/d/1xEQ27x5xyOe571MBBelj_eXsYTdgAaSy/view?usp=share_link"
+                        href="https://drive.google.com/file/d/1YyL8_wp4NXHmECWjv0aNm7jJufQEU18J/view?usp=share_link"
                         type="button"
                         id="phoneFooter"
                         class="btn btn-primary popover__btn"
@@ -605,23 +613,19 @@
     <footer>
       <div class="pt-3 pb-3 bg_nav_foot">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-6 d-flex fw-lighter text-light">
-              © 2023 by Máté Rák
-            </div>
-            <div class="col-sm-6 d-flex flex-row-reverse align-self-center">
-              <div style="margin-left: 8px">
-                <a href="https://github.com/rakmate9812">
-                  <i class="fa-brands fa-github-alt fa-lg footer_icons"></i>
-                </a>
-              </div>
-              <div style="margin-right: 8px">
-                <a
-                  href="https://www.linkedin.com/in/m%C3%A1t%C3%A9-r%C3%A1k-1210ab22b/">
-                  <i class="fa-brands fa-linkedin-in fa-lg footer_icons"></i>
-                </a>
-              </div>
-            </div>
+          © 2023 by Máté Rák
+          <div class="float-end">
+            <span style="margin-right: 15px">
+              <a href="https://github.com/rakmate9812">
+                <i class="fa-brands fa-github-alt fa-lg footer_icons"></i>
+              </a>
+            </span>
+            <span>
+              <a
+                href="https://www.linkedin.com/in/m%C3%A1t%C3%A9-r%C3%A1k-1210ab22b/">
+                <i class="fa-brands fa-linkedin-in fa-lg footer_icons"></i>
+              </a>
+            </span>
           </div>
         </div>
       </div>
