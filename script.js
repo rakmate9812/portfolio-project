@@ -14,6 +14,7 @@ const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav__link");
 const emailPopoverBtn = document.getElementById("emailFooter");
 const forkify = document.querySelector(".forkify__logo");
+const menu = document.getElementById("navbarId");
 const hamburger = document.querySelector(".navbar-toggler");
 console.log(hamburger);
 // ///////////////////////////////////////////////////////////////////
@@ -123,9 +124,24 @@ forkify.addEventListener("click", function () {
   window.location.href = "https://rakmate9812-forkify.netlify.app/";
 });
 
+// BUG
+// Mobile view navbar toggling
+hamburger.addEventListener("click", function () {
+  console.log(menu.classList);
+  // menu.classList.toggle("show");
+  menu.classList.toggle("show");
+});
+
 // Mobile view navbar closing on click of an element
 $(document).ready(function () {
-  $(".navbar-nav li a").click(function (event) {
+  $(".navbar-nav li a").click(function (e) {
     $(".navbar-collapse").collapse("hide");
   });
+});
+
+// Mobile view navbar closing upon touch of the page
+document.body.addEventListener("click", function (e) {
+  if (!e.target.closest("#navbarId") && menu.classList.contains("show")) {
+    menu.classList.toggle("show");
+  }
 });
