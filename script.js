@@ -14,6 +14,8 @@ const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav__link");
 const emailPopoverBtn = document.getElementById("emailFooter");
 const forkify = document.querySelector(".forkify__logo");
+const hamburger = document.querySelector(".navbar-toggler");
+console.log(hamburger);
 // ///////////////////////////////////////////////////////////////////
 
 // Intro Fade-in
@@ -42,7 +44,7 @@ const intersectionCB = function (entries, observer) {
 const navSectionsCB = function (entries) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      console.log(entry.target.id);
+      // console.log(entry.target.id);
       navLinks.forEach((link) => {
         entry.target.id === link.textContent
           ? link.classList.add("hover-class")
@@ -121,16 +123,9 @@ forkify.addEventListener("click", function () {
   window.location.href = "https://rakmate9812-forkify.netlify.app/";
 });
 
-const progressRing = document.querySelector(".progress-ring");
-const progressPercentage = progressRing.querySelector(
-  ".progress-ring__percentage"
-);
-
-// let currentPercentage = 0;
-
-// const updatePercentage = () => {
-//   currentPercentage = (currentPercentage + 1) % 101;
-//   progressPercentage.textContent = `${currentPercentage}%`;
-// };
-
-// setInterval(updatePercentage, 20);
+// Mobile view navbar closing on click of an element
+$(document).ready(function () {
+  $(".navbar-nav li a").click(function (event) {
+    $(".navbar-collapse").collapse("hide");
+  });
+});
