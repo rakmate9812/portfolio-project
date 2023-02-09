@@ -16,7 +16,6 @@ const emailPopoverBtn = document.getElementById("emailFooter");
 const forkify = document.querySelector(".forkify__logo");
 const menu = document.getElementById("navbarId");
 const hamburger = document.querySelector(".navbar-toggler");
-console.log(hamburger);
 // ///////////////////////////////////////////////////////////////////
 
 // Intro Fade-in
@@ -124,24 +123,26 @@ forkify.addEventListener("click", function () {
   window.location.href = "https://rakmate9812-forkify.netlify.app/";
 });
 
-// BUG
-// Mobile view navbar toggling
-hamburger.addEventListener("click", function () {
-  console.log(menu.classList);
-  // menu.classList.toggle("show");
-  menu.classList.toggle("show");
+// BUG - need to get a state- when a state is 0 open the navbar, when the state is 1 close it
+$(document).ready(function () {
+  $(".navbar-toggler").click(function () {
+    $(".navbar-collapse").collapse("toggle");
+    console.log("lefutott a toggle1");
+  });
 });
 
 // Mobile view navbar closing on click of an element
 $(document).ready(function () {
   $(".navbar-nav li a").click(function (e) {
-    $(".navbar-collapse").collapse("hide");
+    $(".navbar-collapse").collapse("toggle");
+    console.log("lefutott a toggle2");
   });
 });
 
 // Mobile view navbar closing upon touch of the page
 document.body.addEventListener("click", function (e) {
   if (!e.target.closest("#navbarId") && menu.classList.contains("show")) {
-    menu.classList.toggle("show");
+    $(".navbar-collapse").collapse("toggle");
+    console.log("lefutott a toggle3");
   }
 });

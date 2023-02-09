@@ -168,6 +168,9 @@ body {
 }
 
 @media only screen and (max-width: 40rem) {
+  .section_padding {
+    padding-top: 200px;
+  }
 }
 
 @media only screen and (min-width: 3840px) {
