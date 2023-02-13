@@ -18,6 +18,7 @@ const popoverTriggerList = document.querySelectorAll(
   '[data-bs-toggle="popover"]'
 );
 const menu = document.getElementById("navbarId");
+// const hamburger = document.querySelector(".navbar-toggler");
 // ///////////////////////////////////////////////////////////////////
 
 // Intro Fade-in
@@ -44,14 +45,20 @@ const intersectionCB = function (entries, observer) {
 };
 
 const navSectionsCB = function (entries) {
+  const mediaQuery = window.matchMedia("(max-width: 40rem)");
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       // console.log(entry.target.id);
-      navLinks.forEach((link) => {
-        entry.target.id === link.textContent
-          ? link.classList.add("hover-class")
-          : link.classList.remove("hover-class");
-      });
+      if (mediaQuery.matches) {
+        observer.unobserve(entries[0].target); // Unobserve the target if the screen size is under 40 rem
+        return;
+      } else {
+        navLinks.forEach((link) => {
+          entry.target.id === link.textContent
+            ? link.classList.add("hover-class")
+            : link.classList.remove("hover-class");
+        });
+      }
     }
   });
 };
