@@ -1,6 +1,6 @@
-/* * {
+* {
   outline: solid 1px red;
-} */
+}
 
 body {
   font-family: "Tahoma", sans-serif !important;
@@ -170,6 +170,10 @@ body {
 @media only screen and (max-width: 40rem) {
   .section_padding {
     padding-top: 200px;
+  }
+
+  .custom_margintop {
+    margin-top: 10vh;
   }
 }
 

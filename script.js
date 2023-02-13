@@ -14,8 +14,10 @@ const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav__link");
 const emailPopoverBtn = document.getElementById("emailFooter");
 const forkify = document.querySelector(".forkify__logo");
+const popoverTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="popover"]'
+);
 const menu = document.getElementById("navbarId");
-const hamburger = document.querySelector(".navbar-toggler");
 // ///////////////////////////////////////////////////////////////////
 
 // Intro Fade-in
@@ -97,9 +99,6 @@ $(".card-deck-sortable").sortable({
 });
 
 // Popovers enabling
-const popoverTriggerList = document.querySelectorAll(
-  '[data-bs-toggle="popover"]'
-);
 const popoverList = [...popoverTriggerList].map(
   (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
 );
@@ -123,11 +122,10 @@ forkify.addEventListener("click", function () {
   window.location.href = "https://rakmate9812-forkify.netlify.app/";
 });
 
-// BUG - need to get a state- when a state is 0 open the navbar, when the state is 1 close it
+// Mobile view navbar closing on click of the navbar-toggler
 $(document).ready(function () {
   $(".navbar-toggler").click(function () {
     $(".navbar-collapse").collapse("toggle");
-    console.log("lefutott a toggle1");
   });
 });
 
@@ -135,7 +133,6 @@ $(document).ready(function () {
 $(document).ready(function () {
   $(".navbar-nav li a").click(function (e) {
     $(".navbar-collapse").collapse("toggle");
-    console.log("lefutott a toggle2");
   });
 });
 
@@ -143,6 +140,5 @@ $(document).ready(function () {
 document.body.addEventListener("click", function (e) {
   if (!e.target.closest("#navbarId") && menu.classList.contains("show")) {
     $(".navbar-collapse").collapse("toggle");
-    console.log("lefutott a toggle3");
   }
 });
