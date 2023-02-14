@@ -167,16 +167,6 @@ body {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 40rem) {
-  .section_padding {
-    padding-top: 200px;
-  }
-
-  .custom_margintop {
-    margin-top: 10vh;
-  }
-}
-
 @media only screen and (min-width: 3840px) {
   body {
     zoom: 220%;
@@ -202,5 +192,29 @@ body {
   }
   .intro_bg {
     height: 60vh;
+  }
+}
+
+/* BUG */
+/* #contact {
+  display: flex;
+} */
+
+.contact_divs {
+  display: block;
+}
+
+@media only screen and (max-width: 40rem) {
+  .section_padding {
+    padding-top: 200px;
+  }
+
+  .custom_margintop {
+    margin-top: 10vh;
+  }
+
+  .mobile_contact {
+    text-align: end;
+    left: 50%;
   }
 }
