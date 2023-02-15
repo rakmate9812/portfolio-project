@@ -195,10 +195,10 @@ body {
   }
 }
 
-/* BUG */
-/* #contact {
+.contact_buttons {
   display: flex;
-} */
+  justify-content: end;
+}
 
 .contact_divs {
   display: block;
@@ -213,8 +213,9 @@ body {
     margin-top: 10vh;
   }
 
-  .mobile_contact {
+  .contact_buttons {
     text-align: end;
+    display: grid;
     left: 50%;
   }
 }
