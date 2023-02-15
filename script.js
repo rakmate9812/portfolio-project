@@ -18,15 +18,7 @@ const popoverTriggerList = document.querySelectorAll(
   '[data-bs-toggle="popover"]'
 );
 const menu = document.getElementById("navbarId");
-// const hamburger = document.querySelector(".navbar-toggler");
 // ///////////////////////////////////////////////////////////////////
-
-// Intro Fade-in
-// document.addEventListener("scroll", function () {
-//   if (window.scrollY > 1) {
-//     intro.classList.add("fade-in");
-//   }
-// });
 
 // Sections fade in - Nav link gets active - with IntersectionObserver API
 const obsOptions = {
