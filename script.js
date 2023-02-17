@@ -17,6 +17,7 @@ const forkify = document.querySelector(".forkify__logo");
 const popoverTriggerList = document.querySelectorAll(
   '[data-bs-toggle="popover"]'
 );
+const mediaQuery = window.matchMedia("(max-width: 40rem)");
 const menu = document.getElementById("navbarId");
 // ///////////////////////////////////////////////////////////////////
 
@@ -36,8 +37,7 @@ const intersectionCB = function (entries, observer) {
   });
 };
 
-const navSectionsCB = function (entries) {
-  const mediaQuery = window.matchMedia("(max-width: 40rem)");
+const navSectionsCB = function (entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       // console.log(entry.target.id);
@@ -121,23 +121,26 @@ forkify.addEventListener("click", function () {
   window.location.href = "https://rakmate9812-forkify.netlify.app/";
 });
 
-// Mobile view navbar closing on click of the navbar-toggler
-$(document).ready(function () {
-  $(".navbar-toggler").click(function () {
-    $(".navbar-collapse").collapse("toggle");
+// MOBILE VIEW
+if (mediaQuery.matches) {
+  // Mobile view navbar closing on click of the navbar-toggler
+  $(document).ready(function () {
+    $(".navbar-toggler").click(function () {
+      $(".navbar-collapse").collapse("toggle");
+    });
   });
-});
 
-// Mobile view navbar closing on click of an element
-$(document).ready(function () {
-  $(".navbar-nav li a").click(function (e) {
-    $(".navbar-collapse").collapse("toggle");
+  // Mobile view navbar closing on click of an element
+  $(document).ready(function () {
+    $(".navbar-nav li a").click(function (e) {
+      $(".navbar-collapse").collapse("toggle");
+    });
   });
-});
 
-// Mobile view navbar closing upon touch of the page
-document.body.addEventListener("click", function (e) {
-  if (!e.target.closest("#navbarId") && menu.classList.contains("show")) {
-    $(".navbar-collapse").collapse("toggle");
-  }
-});
+  // Mobile view navbar closing upon touch of the page
+  document.body.addEventListener("click", function (e) {
+    if (!e.target.closest("#navbarId") && menu.classList.contains("show")) {
+      $(".navbar-collapse").collapse("toggle");
+    }
+  });
+}
