@@ -9,6 +9,7 @@ body {
   background-size: cover;
   background-position: center bottom;
   background-attachment: fixed;
+  text-align: justify;
 }
 
 .blurred_backg {
@@ -25,6 +26,10 @@ body {
 .project_images {
   filter: blur(8px);
   -webkit-filter: blur(3px);
+}
+
+.about_images {
+  padding: 20px;
 }
 
 .bg_nav_foot {
@@ -217,5 +222,16 @@ body {
     text-align: end;
     display: grid;
     left: 50%;
+  }
+
+  .about_images {
+    /* display: flex; */
+    position: absolute;
+    align-content: flex-end;
+    max-width: 4rem;
+    margin: 0;
+    padding: 5px 20px 0px 0px;
+    top: 0;
+    right: 0;
   }
 }
