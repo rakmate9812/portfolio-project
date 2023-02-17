@@ -97,6 +97,7 @@ body {
 }
 
 .skill_card {
+  display: flex;
   max-width: 16rem;
   min-height: 11rem;
   text-align: center;
@@ -233,5 +234,16 @@ body {
     padding: 5px 20px 0px 0px;
     top: 0;
     right: 0;
+  }
+
+  /* TODO */
+  .skill_card {
+    width: 10rem;
+    min-height: 8rem;
+    text-align: center;
+  }
+
+  .skill_card .card-body {
+    display: none;
   }
 }
