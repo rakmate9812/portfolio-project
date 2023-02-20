@@ -24,7 +24,7 @@ const menu = document.getElementById("navbarId");
 // Sections fade in - Nav link gets active - with IntersectionObserver API
 const obsOptions = {
   root: null,
-  threshold: 0.5,
+  threshold: 0.8,
 };
 
 const intersectionCB = function (entries, observer) {
