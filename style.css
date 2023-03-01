@@ -55,6 +55,11 @@ body {
   font-size: larger;
 }
 
+/* TODO */
+/* #skills {
+  background-color: rgba(0, 0, 0, 0.1);
+} */
+
 .hidden {
   opacity: 0;
   transition: opacity 1s;
@@ -73,17 +78,6 @@ body {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
-.card__background {
-  background: linear-gradient(to right, #d1e0ff, #5384ed);
-}
-
-.card-deck-sortable {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 .rounded_edges {
   border-radius: 15px;
 }
@@ -94,13 +88,6 @@ body {
 
 .very_rounded_edges {
   border-radius: 30px;
-}
-
-.skill_card {
-  display: flex;
-  max-width: 16rem;
-  min-height: 11rem;
-  text-align: center;
 }
 
 .nav__link {
@@ -234,16 +221,5 @@ body {
     padding: 5px 20px 0px 0px;
     top: 0;
     right: 0;
-  }
-
-  /* TODO */
-  .skill_card {
-    width: 10rem;
-    min-height: 8rem;
-    text-align: center;
-  }
-
-  .skill_card .card-body {
-    display: none;
   }
 }

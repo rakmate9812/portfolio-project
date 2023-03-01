@@ -23,8 +23,8 @@ const menu = document.getElementById("navbarId");
 
 // Sections fade in - Nav link gets active - with IntersectionObserver API
 const obsOptions = {
-  root: null,
-  threshold: 0.8,
+  rootMargin: "-30%",
+  threshold: 0,
 };
 
 const intersectionCB = function (entries, observer) {
@@ -62,24 +62,24 @@ intersections.forEach((intersec) => intersectionObserver.observe(intersec));
 const navSectionObserver = new IntersectionObserver(navSectionsCB, obsOptions);
 sections.forEach((intersec) => navSectionObserver.observe(intersec));
 
-// Tabulated "Skills" component
-skillTab.addEventListener("click", function (e) {
-  e.preventDefault();
-  const clicked = e.target.closest(".skill__tab");
+// // Tabulated "Skills" component -- REMOVED
+// skillTab.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   const clicked = e.target.closest(".skill__tab");
 
-  if (!clicked) return;
+//   if (!clicked) return;
 
-  tabs.forEach((tab) => {
-    tab.classList.remove("active");
+//   tabs.forEach((tab) => {
+//     tab.classList.remove("active");
 
-    decks[+tab.dataset.tab - 1].classList.contains("d-none")
-      ? ""
-      : decks[+tab.dataset.tab - 1].classList.add("d-none");
-  });
+//     decks[+tab.dataset.tab - 1].classList.contains("d-none")
+//       ? ""
+//       : decks[+tab.dataset.tab - 1].classList.add("d-none");
+//   });
 
-  clicked.classList.add("active");
-  decks[+clicked.dataset.tab - 1].classList.remove("d-none");
-});
+//   clicked.classList.add("active");
+//   decks[+clicked.dataset.tab - 1].classList.remove("d-none");
+// });
 
 // Today date insert into span
 const formattedDate = function () {
@@ -92,7 +92,7 @@ const formattedDate = function () {
 };
 todayDate.innerHTML = formattedDate();
 
-// // Sortable skill cards
+// // Sortable skill cards -- REMOVED
 // $(".card-deck-sortable").sortable({
 //   connectWith: ".skill_deck",
 // });
