@@ -23,7 +23,7 @@ const menu = document.getElementById("navbarId");
 
 // Sections fade in - Nav link gets active - with IntersectionObserver API
 const obsOptions = {
-  rootMargin: "-30%",
+  rootMargin: "-25%",
   threshold: 0,
 };
 
