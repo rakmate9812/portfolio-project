@@ -92,10 +92,10 @@ const formattedDate = function () {
 };
 todayDate.innerHTML = formattedDate();
 
-// Sortable skill cards
-$(".card-deck-sortable").sortable({
-  connectWith: ".skill_deck",
-});
+// // Sortable skill cards
+// $(".card-deck-sortable").sortable({
+//   connectWith: ".skill_deck",
+// });
 
 // Popovers enabling
 const popoverList = [...popoverTriggerList].map(
