@@ -62,10 +62,6 @@ body {
   max-width: 2.5em;
   margin-right: 7px;
 }
-/* TODO */
-/* #skills {
-  background-color: rgba(0, 0, 0, 0.1);
-} */
 
 .hidden {
   opacity: 0;
@@ -181,6 +177,14 @@ body {
   }
 }
 
+.skill__info {
+  width: 1.5em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  margin: 3px;
+}
 @media only screen and (min-width: 2560px) {
   body {
     zoom: 160%;
@@ -202,6 +206,10 @@ body {
 
 .contact_divs {
   display: block;
+}
+
+#skills .card .card-text {
+  display: none;
 }
 
 @media only screen and (max-width: 40rem) {
@@ -228,5 +236,10 @@ body {
     padding: 5px 20px 0px 0px;
     top: 0;
     right: 0;
+  }
+
+  /* TODO */
+  #skills .card .progress {
+    display: none;
   }
 }

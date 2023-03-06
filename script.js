@@ -23,7 +23,7 @@ const menu = document.getElementById("navbarId");
 
 // Sections fade in - Nav link gets active - with IntersectionObserver API
 const obsOptions = {
-  rootMargin: "-25%",
+  rootMargin: "-20%",
   threshold: 0,
 };
 
@@ -62,25 +62,6 @@ intersections.forEach((intersec) => intersectionObserver.observe(intersec));
 const navSectionObserver = new IntersectionObserver(navSectionsCB, obsOptions);
 sections.forEach((intersec) => navSectionObserver.observe(intersec));
 
-// // Tabulated "Skills" component -- REMOVED
-// skillTab.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   const clicked = e.target.closest(".skill__tab");
-
-//   if (!clicked) return;
-
-//   tabs.forEach((tab) => {
-//     tab.classList.remove("active");
-
-//     decks[+tab.dataset.tab - 1].classList.contains("d-none")
-//       ? ""
-//       : decks[+tab.dataset.tab - 1].classList.add("d-none");
-//   });
-
-//   clicked.classList.add("active");
-//   decks[+clicked.dataset.tab - 1].classList.remove("d-none");
-// });
-
 // Today date insert into span
 const formattedDate = function () {
   // prettier-ignore
@@ -91,11 +72,6 @@ const formattedDate = function () {
   return month + ", " + year;
 };
 todayDate.innerHTML = formattedDate();
-
-// // Sortable skill cards -- REMOVED
-// $(".card-deck-sortable").sortable({
-//   connectWith: ".skill_deck",
-// });
 
 // Popovers enabling
 const popoverList = [...popoverTriggerList].map(
@@ -121,6 +97,13 @@ forkify.addEventListener("click", function () {
   window.location.href = "https://rakmate9812-forkify.netlify.app/";
 });
 
+// Skill body text toggle
+$(document).ready(function () {
+  $(".card .text__toggler").click(function () {
+    $(this).closest(".card").find(".card-text").toggle();
+  });
+});
+
 // MOBILE VIEW
 if (mediaQuery.matches) {
   // Mobile view navbar closing on click of the navbar-toggler
@@ -142,5 +125,12 @@ if (mediaQuery.matches) {
     if (!e.target.closest("#navbarId") && menu.classList.contains("show")) {
       $(".navbar-collapse").collapse("toggle");
     }
+  });
+
+  // Progress bar toggler
+  $(document).ready(function () {
+    $(".card .text__toggler").click(function () {
+      $(this).closest(".card").find(".progress").toggle();
+    });
   });
 }
