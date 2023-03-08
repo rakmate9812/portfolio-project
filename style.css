@@ -238,8 +238,7 @@ body {
     right: 0;
   }
 
-  /* TODO */
-  #skills .card .progress {
+  #skills .card .mobile__toggler {
     display: none;
   }
 }

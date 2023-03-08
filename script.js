@@ -123,14 +123,14 @@ if (mediaQuery.matches) {
   // Mobile view navbar closing upon touch of the page
   document.body.addEventListener("click", function (e) {
     if (!e.target.closest("#navbarId") && menu.classList.contains("show")) {
-      $(".navbar-collapse").collapse("toggle");
+      $(".navbar-collaps2e").collapse("toggle");
     }
   });
 
   // Progress bar toggler
   $(document).ready(function () {
     $(".card .text__toggler").click(function () {
-      $(this).closest(".card").find(".progress").toggle();
+      $(this).closest(".card").find(".mobile__toggler").toggle();
     });
   });
 }
