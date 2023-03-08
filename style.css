@@ -19,9 +19,6 @@ body {
   margin-top: 20vh;
 }
 
-.navbar-brand {
-  background-color: #029800;
-}
 .section_padding {
   padding-top: 100px;
 }
@@ -239,6 +236,25 @@ body {
   }
 
   #skills .card .mobile__toggler {
+    display: none;
+  }
+
+  /* carousel mobile settings TODO */
+  .carousel-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .carousel-inner {
+    height: 100%;
+  }
+
+  .carousel-item {
+    height: 100%;
+  }
+
+  .carousel-indicators {
     display: none;
   }
 }

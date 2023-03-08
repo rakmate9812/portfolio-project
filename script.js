@@ -123,7 +123,7 @@ if (mediaQuery.matches) {
   // Mobile view navbar closing upon touch of the page
   document.body.addEventListener("click", function (e) {
     if (!e.target.closest("#navbarId") && menu.classList.contains("show")) {
-      $(".navbar-collaps2e").collapse("toggle");
+      $(".navbar-collapse").collapse("toggle");
     }
   });
 
@@ -132,5 +132,10 @@ if (mediaQuery.matches) {
     $(".card .text__toggler").click(function () {
       $(this).closest(".card").find(".mobile__toggler").toggle();
     });
+  });
+
+  // Removing rounded edges from Skill carousel
+  $(document).ready(function () {
+    $(".carousel-inner").removeClass("very_rounded_edges");
   });
 }
