@@ -1,6 +1,6 @@
-/* * {
+* {
   outline: solid 1px red;
-} */
+}
 
 body {
   font-family: "Tahoma", sans-serif !important;
@@ -239,11 +239,11 @@ body {
     display: none;
   }
 
-  /* carousel mobile settings TODO */
-  .carousel-container {
+  .carousel {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 70vh;
+    width: 100%;
   }
 
   .carousel-inner {
@@ -256,5 +256,23 @@ body {
 
   .carousel-indicators {
     display: none;
+  }
+
+  .project_images {
+    filter: blur(8px);
+    -webkit-filter: blur(3px);
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-caption p {
+    display: none;
+  }
+
+  /* TODO */
+  .carousel-caption {
+    display: flex !important;
+    justify-content: center;
   }
 }
