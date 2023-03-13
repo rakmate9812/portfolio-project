@@ -1,6 +1,6 @@
-* {
+/* * {
   outline: solid 1px red;
-}
+} */
 
 body {
   font-family: "Tahoma", sans-serif !important;
@@ -239,6 +239,10 @@ body {
     display: none;
   }
 
+  #skills .card-title {
+    /* background-color: #386de0; */
+    text-align: left;
+  }
   .carousel {
     display: flex;
     flex-direction: column;
@@ -270,9 +274,12 @@ body {
     display: none;
   }
 
-  /* TODO */
   .carousel-caption {
     display: flex !important;
     justify-content: center;
+  }
+
+  .carousel-inner img {
+    width: 10rem;
   }
 }
