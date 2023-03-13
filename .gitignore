@@ -1,2 +1,7 @@
 todolist.txt
 other
+dist
+finalDist
+.parcel-cache
+package-lock.json
+node_modules

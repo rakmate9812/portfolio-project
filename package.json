@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio-project",
+  "scripts": {
+    "start": "parcel --open chrome index.html",
+    "build": "parcel build index.html --dist-dir finalDist --no-scope-hoist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rakmate9812/portfolio-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rakmate9812/portfolio-project/issues"
+  },
+  "homepage": "https://github.com/rakmate9812/portfolio-project#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "core-js": "^3.29.1",
+    "jquery": "^3.6.4",
+    "parcel": "^2.8.3",
+    "regenerator-runtime": "^0.13.11",
+    "sass": "^1.59.2"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3"
+  }
+}

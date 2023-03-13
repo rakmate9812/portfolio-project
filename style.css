@@ -7,7 +7,7 @@ body {
   background-image: url("img/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center bottom;
+  background-position: 0 bottom; /* instead of center, use 0, some bugs can appear in mobile view*/
   background-attachment: fixed;
   text-align: justify;
 }
@@ -201,8 +201,9 @@ body {
   justify-content: end;
 }
 
-.contact_divs {
-  display: block;
+.contact_button {
+  min-width: 11rem;
+  /* max-width: 10rem; */
 }
 
 #skills .card .card-text {
@@ -240,9 +241,10 @@ body {
   }
 
   #skills .card-title {
-    /* background-color: #386de0; */
     text-align: left;
+    font-size: medium;
   }
+
   .carousel {
     display: flex;
     flex-direction: column;

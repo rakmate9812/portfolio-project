@@ -1,5 +1,5 @@
 // Decided to skip OOP because of the small size of the project
-"use strict";
+import $ from "jquery"; // TODO - DOES NOT WORK
 // console.log($);
 
 // Selectors
@@ -14,11 +14,11 @@ const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav__link");
 const emailPopoverBtn = document.getElementById("emailFooter");
 const forkify = document.querySelector(".forkify__logo");
+const mediaQuery = window.matchMedia("(max-width: 40rem)");
+const menu = document.getElementById("navbarId");
 const popoverTriggerList = document.querySelectorAll(
   '[data-bs-toggle="popover"]'
 );
-const mediaQuery = window.matchMedia("(max-width: 40rem)");
-const menu = document.getElementById("navbarId");
 // ///////////////////////////////////////////////////////////////////
 
 // Sections fade in - Nav link gets active - with IntersectionObserver API
@@ -74,7 +74,7 @@ const formattedDate = function () {
 todayDate.innerHTML = formattedDate();
 
 // Popovers enabling
-const popoverList = [...popoverTriggerList].map(
+[...popoverTriggerList].map(
   (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
 );
 
