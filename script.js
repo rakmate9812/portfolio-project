@@ -115,7 +115,7 @@ if (mediaQuery.matches) {
 
   // Mobile view navbar closing on click of an element
   $(document).ready(function () {
-    $(".navbar-nav li a").click(function (e) {
+    $(".navbar-nav li a").click(function () {
       $(".navbar-collapse").collapse("toggle");
     });
   });
