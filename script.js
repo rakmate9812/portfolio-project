@@ -1,29 +1,21 @@
 // Decided to skip OOP because of the small size of the project
-import $ from "jquery"; // TODO - DOES NOT WORK
+
+import $ from "/node_modules/jquery/dist/jquery.min.js"; // not working yet beacuse of bootstraps jquery.........
 // console.log($);
 
 // Selectors
-const skillTab = document.querySelector(".skill__tabs__container");
-const tabs = document.querySelectorAll(".skill__tab");
-const skillDeck = document.querySelector(".skill__deck__container");
-const decks = document.querySelectorAll(".skill__deck");
-const intro = document.getElementById("intro");
 const todayDate = document.getElementById("today");
 const intersections = document.querySelectorAll(".intersection");
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav__link");
-const emailPopoverBtn = document.getElementById("emailFooter");
 const forkify = document.querySelector(".forkify__logo");
 const mediaQuery = window.matchMedia("(max-width: 40rem)");
 const menu = document.getElementById("navbarId");
-const popoverTriggerList = document.querySelectorAll(
-  '[data-bs-toggle="popover"]'
-);
 // ///////////////////////////////////////////////////////////////////
 
 // Sections fade in - Nav link gets active - with IntersectionObserver API
 const obsOptions = {
-  rootMargin: "-20%",
+  rootMargin: "-30%",
   threshold: 0,
 };
 
@@ -73,23 +65,9 @@ const formattedDate = function () {
 };
 todayDate.innerHTML = formattedDate();
 
-// Popovers enabling
-[...popoverTriggerList].map(
-  (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
-);
-
-// Helper popover function
-const helperPopup = function (btnID) {
-  $("#" + btnID).popover("show");
-  setTimeout(function () {
-    $("#" + btnID).popover("hide");
-  }, 1000);
-};
-
-// E-mail copy to clipboard, popover hiding
-emailPopoverBtn.addEventListener("click", function () {
-  navigator.clipboard.writeText("rakmate9812@gmail.com");
-  helperPopup(emailPopoverBtn.id);
+// Navigating to my forkify app on click of the logo
+forkify.addEventListener("click", function () {
+  window.location.href = "https://rakmate9812-forkify.netlify.app/";
 });
 
 // Navigating to my forkify app on click of the logo

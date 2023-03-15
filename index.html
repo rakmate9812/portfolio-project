@@ -7,10 +7,10 @@
     <title>Me myself and I</title>
     <link rel="stylesheet" href="main.scss" />
     <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js"></script>
     <script
-      defer
-      src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script defer type="module" src="script.js"></script>
+      type="module"
+      src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script
       defer
       src="https://kit.fontawesome.com/ea067a8456.js"
@@ -527,7 +527,7 @@
         </div>
         <div class="bottom_shadow pb-3">
           <!-- h2 Projects -->
-          <div class="custom_margintop container">
+          <div class="custom_margintop container" style="margin-bottom: 10%">
             <section id="projects" class="intersection hidden section_padding">
               <div class="row">
                 <div class="col-sm-12 d-flex justify-content-center">
@@ -607,46 +607,6 @@
               </div>
             </section>
           </div>
-          <!-- h2 Contact -->
-          <div class="custom_margintop container">
-            <section id="contact" class="intersection hidden">
-              <div class="contact_buttons">
-                <div class="card m-2 contact_button">
-                  <div class="card-body">
-                    <h5 class="card-title">Send me an e-mail</h5>
-                    <button
-                      type="button"
-                      id="emailFooter"
-                      class="btn btn-primary popover__btn"
-                      style="min-width: 70%"
-                      data-bs-container="body"
-                      data-bs-toggle="popover"
-                      data-bs-placement="bottom"
-                      data-bs-content="Copied!">
-                      Copy adress
-                    </button>
-                  </div>
-                </div>
-                <div class="card m-2 contact_button">
-                  <div class="card-body">
-                    <h5 class="card-title">My CV</h5>
-                    <a
-                      href="https://drive.google.com/file/d/1YyL8_wp4NXHmECWjv0aNm7jJufQEU18J/view?usp=share_link"
-                      type="button"
-                      id="phoneFooter"
-                      class="btn btn-primary popover__btn"
-                      style="min-width: 70%"
-                      data-bs-container="body"
-                      data-bs-toggle="popover"
-                      data-bs-placement="bottom"
-                      data-bs-content="Redirecting..">
-                      Link
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
         </div>
       </div>
     </main>
@@ -654,23 +614,43 @@
     <footer>
       <div class="pt-3 pb-3 bg_nav_foot">
         <div class="container">
-          © 2023 by Máté Rák
-          <div class="float-end">
-            <span style="margin-right: 15px">
-              <a
-                href="https://github.com/rakmate9812"
-                style="text-decoration: none">
-                <i class="fa-brands fa-github-alt fa-lg footer_icons"></i>
-              </a>
-            </span>
-            <span>
-              <a
-                href="https://www.linkedin.com/in/m%C3%A1t%C3%A9-r%C3%A1k-1210ab22b/"
-                style="text-decoration: none">
-                <i class="fa-brands fa-linkedin-in fa-lg footer_icons"></i>
-              </a>
-            </span>
-          </div>
+          <table style="width: 100%">
+            <tr>
+              <td><div>© 2023 by Máté Rák</div></td>
+              <td>
+                <div class="float-end">
+                  <span style="margin-right: 15px">
+                    <a href="email" style="text-decoration: none">
+                      <i class="fa-regular fa-envelope fa-xl footer_icons"></i>
+                    </a>
+                  </span>
+                  <span style="margin-right: 15px">
+                    <a
+                      href="https://drive.google.com/file/d/1YyL8_wp4NXHmECWjv0aNm7jJufQEU18J/view?usp=sharing"
+                      style="text-decoration: none">
+                      <i
+                        class="fa-regular fa-file-lines fa-xl footer_icons"></i>
+                    </a>
+                  </span>
+                  <span style="margin-right: 15px">
+                    <a
+                      href="https://github.com/rakmate9812"
+                      style="text-decoration: none">
+                      <i class="fa-brands fa-github-alt fa-xl footer_icons"></i>
+                    </a>
+                  </span>
+                  <span>
+                    <a
+                      href="https://www.linkedin.com/in/m%C3%A1t%C3%A9-r%C3%A1k-1210ab22b/"
+                      style="text-decoration: none">
+                      <i
+                        class="fa-brands fa-linkedin-in fa-xl footer_icons"></i>
+                    </a>
+                  </span>
+                </div>
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
     </footer>

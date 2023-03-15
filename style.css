@@ -151,6 +151,7 @@ body {
   top: 50%;
   transform: translateY(-10%);
 }
+
 .footer_icons {
   color: #fff;
 }
@@ -158,6 +159,11 @@ body {
 .footer_icons:hover {
   color: bisque;
   cursor: pointer;
+}
+
+.footer_text {
+  color: lightgrey;
+  font-size: smaller;
 }
 
 @media only screen and (min-width: 3840px) {
@@ -196,16 +202,6 @@ body {
   }
 }
 
-.contact_buttons {
-  display: flex;
-  justify-content: end;
-}
-
-.contact_button {
-  min-width: 11rem;
-  /* max-width: 10rem; */
-}
-
 #skills .card .card-text {
   display: none;
 }
@@ -217,12 +213,6 @@ body {
 
   .custom_margintop {
     margin-top: 10vh;
-  }
-
-  .contact_buttons {
-    text-align: end;
-    display: grid;
-    left: 50%;
   }
 
   .about_images {
