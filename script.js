@@ -1,7 +1,6 @@
 // Decided to skip OOP because of the small size of the project
 
-import $ from "/node_modules/jquery/dist/jquery.min.js"; // not working yet beacuse of bootstraps jquery.........
-// console.log($);
+var jq = jQuery.noConflict(); // avoiding conflict with bootstrap's jQuery
 
 // Selectors
 const todayDate = document.getElementById("today");
@@ -76,44 +75,44 @@ forkify.addEventListener("click", function () {
 });
 
 // Skill body text toggle
-$(document).ready(function () {
-  $(".card .text__toggler").click(function () {
-    $(this).closest(".card").find(".card-text").toggle();
+jq(document).ready(function () {
+  jq(".card .text__toggler").click(function () {
+    jq(this).closest(".card").find(".card-text").toggle();
   });
 });
 
 // MOBILE VIEW
 if (mediaQuery.matches) {
   // Mobile view navbar closing on click of the navbar-toggler
-  $(document).ready(function () {
-    $(".navbar-toggler").click(function () {
-      $(".navbar-collapse").collapse("toggle");
+  jq(document).ready(function () {
+    jq(".navbar-toggler").click(function () {
+      jq(".navbar-collapse").collapse("toggle");
     });
   });
 
   // Mobile view navbar closing on click of an element
-  $(document).ready(function () {
-    $(".navbar-nav li a").click(function () {
-      $(".navbar-collapse").collapse("toggle");
+  jq(document).ready(function () {
+    jq(".navbar-nav li a").click(function () {
+      jq(".navbar-collapse").collapse("toggle");
     });
   });
 
   // Mobile view navbar closing upon touch of the page
   document.body.addEventListener("click", function (e) {
     if (!e.target.closest("#navbarId") && menu.classList.contains("show")) {
-      $(".navbar-collapse").collapse("toggle");
+      jq(".navbar-collapse").collapse("toggle");
     }
   });
 
   // Progress bar toggler
-  $(document).ready(function () {
-    $(".card .text__toggler").click(function () {
-      $(this).closest(".card").find(".mobile__toggler").toggle();
+  jq(document).ready(function () {
+    jq(".card .text__toggler").click(function () {
+      jq(this).closest(".card").find(".mobile__toggler").toggle();
     });
   });
 
   // Removing rounded edges from Skill carousel
-  $(document).ready(function () {
-    $(".carousel-inner").removeClass("very_rounded_edges");
+  jq(document).ready(function () {
+    jq(".carousel-inner").removeClass("very_rounded_edges");
   });
 }
