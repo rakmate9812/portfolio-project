@@ -7,14 +7,6 @@
     <title>Me myself and I</title>
     <link rel="stylesheet" href="main.scss" />
     <link rel="stylesheet" href="style.css" />
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script type="module" src="script.js"></script>
-    <script
-      type="module"
-      src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script
-      src="https://kit.fontawesome.com/ea067a8456.js"
-      crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -483,9 +475,8 @@
                               aria-valuemax="100"></div>
                           </div>
                           <p class="card-text">
-                            Microsoft (Graph, Management, SP) API-s,
-                            implementing them in .NET apps, also basic WEB API-s
-                            in JS projects
+                            Microsoft API-s, implementing them in .NET apps,
+                            also basic WEB API-s for JS
                           </p>
                         </div>
                       </div>
@@ -620,7 +611,13 @@
               <td>
                 <div class="float-end">
                   <span style="margin-right: 15px">
-                    <a href="email" style="text-decoration: none">
+                    <a
+                      id="emailIcon"
+                      data-bs-container="body"
+                      data-bs-toggle="popover"
+                      data-bs-placement="bottom"
+                      data-bs-content="Copied!"
+                      style="text-decoration: none">
                       <i class="fa-regular fa-envelope fa-lg footer_icons"></i>
                     </a>
                   </span>
@@ -654,5 +651,13 @@
         </div>
       </div>
     </footer>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="module" src="script.js"></script>
+    <script
+      type="module"
+      src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ea067a8456.js"
+      crossorigin="anonymous"></script>
   </body>
 </html>

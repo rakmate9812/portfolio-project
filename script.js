@@ -1,5 +1,5 @@
 // Decided to skip OOP because of the small size of the project
-
+import bootstrap from "bootstrap/dist/js/bootstrap.min.js";
 var jq = jQuery.noConflict(); // avoiding conflict with bootstrap's jQuery
 
 // Selectors
@@ -10,6 +10,10 @@ const navLinks = document.querySelectorAll(".nav__link");
 const forkify = document.querySelector(".forkify__logo");
 const mediaQuery = window.matchMedia("(max-width: 40rem)");
 const menu = document.getElementById("navbarId");
+const emailPopoverBtn = document.getElementById("emailIcon");
+const popoverTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="popover"]'
+);
 // ///////////////////////////////////////////////////////////////////
 
 // Sections fade in - Nav link gets active - with IntersectionObserver API
@@ -79,6 +83,24 @@ jq(document).ready(function () {
   jq(".card .text__toggler").click(function () {
     jq(this).closest(".card").find(".card-text").toggle();
   });
+});
+// Popovers enabling
+const popoverList = [...popoverTriggerList].map(
+  (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+);
+
+// Helper popover function
+const helperPopup = function (btnID) {
+  jq("#" + btnID).popover("show");
+  setTimeout(function () {
+    jq("#" + btnID).popover("hide");
+  }, 1000);
+};
+
+// E-mail copy to clipboard, popover hiding
+emailPopoverBtn.addEventListener("click", function () {
+  navigator.clipboard.writeText("rakmate9812@gmail.com");
+  helperPopup(emailPopoverBtn.id);
 });
 
 // MOBILE VIEW
