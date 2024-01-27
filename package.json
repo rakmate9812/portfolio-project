@@ -17,14 +17,17 @@
   },
   "homepage": "https://github.com/rakmate9812/portfolio-project#readme",
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
     "core-js": "^3.29.1",
-    "jquery": "^3.6.4",
+    "jquery": "^3.6.1",
     "parcel": "^2.8.3",
     "regenerator-runtime": "^0.13.11",
     "sass": "^1.59.2"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.8.3"
+    "@parcel/packager-raw-url": "^2.8.3",
+    "@parcel/transformer-sass": "^2.8.3",
+    "@parcel/transformer-webmanifest": "^2.8.3"
   }
 }

@@ -8,4 +8,6 @@ Project starting date: 2023. Jan. 09.
 
 NPM packages added.
 
-Current state: Finishing
+Current state: Finishing, deploying
+
+### Available at: https://rakmate9812-portfolio.netlify.app/

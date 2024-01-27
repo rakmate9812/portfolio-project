@@ -1,6 +1,6 @@
 // Decided to skip OOP because of the small size of the project
-import $ from "jquery"; // TODO - DOES NOT WORK
-// console.log($);
+import bootstrap from "bootstrap/dist/js/bootstrap.min.js";
+var jq = jQuery.noConflict(); // avoiding conflict with bootstrap's jQuery
 
 // Selectors
 const skillTab = document.querySelector(".skill__tabs__container");
@@ -12,11 +12,11 @@ const age = document.getElementById("age");
 const intersections = document.querySelectorAll(".intersection");
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav__link");
-const emailPopoverBtn = document.getElementById("emailFooter");
 const forkify = document.querySelector(".forkify__logo");
 const pizzaed = document.querySelector(".pizzaed_logo");
 const mediaQuery = window.matchMedia("(max-width: 40rem)");
 const menu = document.getElementById("navbarId");
+const emailPopoverBtn = document.getElementById("emailIcon");
 const popoverTriggerList = document.querySelectorAll(
   '[data-bs-toggle="popover"]'
 );
@@ -24,7 +24,7 @@ const popoverTriggerList = document.querySelectorAll(
 
 // Sections fade in - Nav link gets active - with IntersectionObserver API
 const obsOptions = {
-  rootMargin: "-20%",
+  rootMargin: "-30%",
   threshold: 0,
 };
 
@@ -82,16 +82,32 @@ const currentAge = function (birthYear) {
 
 age.innerHTML = currentAge(1998);
 
+// Navigating to my forkify app on click of the logo
+forkify.addEventListener("click", function () {
+  window.location.href = "https://rakmate9812-forkify.netlify.app/";
+});
+
+// Navigating to my forkify app on click of the logo
+forkify.addEventListener("click", function () {
+  window.location.href = "https://rakmate9812-forkify.netlify.app/";
+});
+
+// Skill body text toggle
+jq(document).ready(function () {
+  jq(".card .text__toggler").click(function () {
+    jq(this).closest(".card").find(".card-text").toggle();
+  });
+});
 // Popovers enabling
-[...popoverTriggerList].map(
+const popoverList = [...popoverTriggerList].map(
   (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
 );
 
 // Helper popover function
 const helperPopup = function (btnID) {
-  $("#" + btnID).popover("show");
+  jq("#" + btnID).popover("show");
   setTimeout(function () {
-    $("#" + btnID).popover("hide");
+    jq("#" + btnID).popover("hide");
   }, 1000);
 };
 
@@ -119,36 +135,36 @@ $(document).ready(function () {
 // MOBILE VIEW
 if (mediaQuery.matches) {
   // Mobile view navbar closing on click of the navbar-toggler
-  $(document).ready(function () {
-    $(".navbar-toggler").click(function () {
-      $(".navbar-collapse").collapse("toggle");
+  jq(document).ready(function () {
+    jq(".navbar-toggler").click(function () {
+      jq(".navbar-collapse").collapse("toggle");
     });
   });
 
   // Mobile view navbar closing on click of an element
-  $(document).ready(function () {
-    $(".navbar-nav li a").click(function () {
-      $(".navbar-collapse").collapse("toggle");
+  jq(document).ready(function () {
+    jq(".navbar-nav li a").click(function () {
+      jq(".navbar-collapse").collapse("toggle");
     });
   });
 
   // Mobile view navbar closing upon touch of the page
   document.body.addEventListener("click", function (e) {
     if (!e.target.closest("#navbarId") && menu.classList.contains("show")) {
-      $(".navbar-collapse").collapse("toggle");
+      jq(".navbar-collapse").collapse("toggle");
     }
   });
 
   // Progress bar toggler
-  $(document).ready(function () {
-    $(".card .text__toggler").click(function () {
-      $(this).closest(".card").find(".mobile__toggler").toggle();
+  jq(document).ready(function () {
+    jq(".card .text__toggler").click(function () {
+      jq(this).closest(".card").find(".mobile__toggler").toggle();
     });
   });
 
   // Removing rounded edges from Skill carousel
-  $(document).ready(function () {
-    $(".carousel-inner").removeClass("very_rounded_edges");
+  jq(document).ready(function () {
+    jq(".carousel-inner").removeClass("very_rounded_edges");
   });
 }
 ////////////////
