@@ -55,6 +55,10 @@ body {
   font-size: larger;
 }
 
+.card-body {
+  min-height: 7.5rem;
+}
+
 .skill_img {
   max-width: 2.5em;
   margin-right: 7px;
@@ -88,6 +92,10 @@ body {
 
 .very_rounded_edges {
   border-radius: 30px;
+}
+
+.custom_carousel_height {
+  height: 31rem;
 }
 
 .nav__link {
@@ -143,7 +151,7 @@ body {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
 }
 
-.forkify__logo {
+.carousel__logo {
   cursor: pointer;
   width: 25%;
   display: block;
@@ -151,6 +159,7 @@ body {
   top: 50%;
   transform: translateY(-10%);
 }
+
 .footer_icons {
   color: #fff;
 }
@@ -182,6 +191,7 @@ body {
   cursor: pointer;
   margin: 3px;
 }
+
 @media only screen and (min-width: 2560px) {
   body {
     zoom: 160%;
@@ -243,6 +253,10 @@ body {
   #skills .card-title {
     text-align: left;
     font-size: medium;
+  }
+
+  .card-body {
+    min-height: 4.5em;
   }
 
   .carousel {

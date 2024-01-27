@@ -8,12 +8,13 @@ const tabs = document.querySelectorAll(".skill__tab");
 const skillDeck = document.querySelector(".skill__deck__container");
 const decks = document.querySelectorAll(".skill__deck");
 const intro = document.getElementById("intro");
-const todayDate = document.getElementById("today");
+const age = document.getElementById("age");
 const intersections = document.querySelectorAll(".intersection");
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav__link");
 const emailPopoverBtn = document.getElementById("emailFooter");
 const forkify = document.querySelector(".forkify__logo");
+const pizzaed = document.querySelector(".pizzaed_logo");
 const mediaQuery = window.matchMedia("(max-width: 40rem)");
 const menu = document.getElementById("navbarId");
 const popoverTriggerList = document.querySelectorAll(
@@ -62,16 +63,24 @@ intersections.forEach((intersec) => intersectionObserver.observe(intersec));
 const navSectionObserver = new IntersectionObserver(navSectionsCB, obsOptions);
 sections.forEach((intersec) => navSectionObserver.observe(intersec));
 
-// Today date insert into span
-const formattedDate = function () {
-  // prettier-ignore
-  const monthNamesEng = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",];
-  const today = new Date();
-  const month = monthNamesEng[today.getMonth()];
-  const year = today.getFullYear();
-  return month + ", " + year;
+// // Today date insert into span
+// const formattedDate = function () {
+//   // prettier-ignore
+//   const monthNamesEng = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",];
+//   const today = new Date();
+//   const month = monthNamesEng[today.getMonth()];
+//   const year = today.getFullYear();
+//   return month + ", " + year;
+// };
+// // todayDate.innerHTML = formattedDate();
+
+const currentAge = function (birthYear) {
+  const currentYear = new Date().getFullYear();
+
+  return currentYear - birthYear;
 };
-todayDate.innerHTML = formattedDate();
+
+age.innerHTML = currentAge(1998);
 
 // Popovers enabling
 [...popoverTriggerList].map(
@@ -86,15 +95,18 @@ const helperPopup = function (btnID) {
   }, 1000);
 };
 
-// E-mail copy to clipboard, popover hiding
-emailPopoverBtn.addEventListener("click", function () {
-  navigator.clipboard.writeText("rakmate9812@gmail.com");
-  helperPopup(emailPopoverBtn.id);
-});
+// // E-mail copy to clipboard, popover hiding
+// emailPopoverBtn.addEventListener("click", function () {
+//   navigator.clipboard.writeText("rakmate9812@gmail.com");
+//   helperPopup(emailPopoverBtn.id);
+// });
 
-// Navigating to my forkify app on click of the logo
 forkify.addEventListener("click", function () {
   window.location.href = "https://rakmate9812-forkify.netlify.app/";
+});
+
+pizzaed.addEventListener("click", function () {
+  window.location.href = "https://github.com/rakmate9812/pizza-app";
 });
 
 // Skill body text toggle
@@ -139,3 +151,4 @@ if (mediaQuery.matches) {
     $(".carousel-inner").removeClass("very_rounded_edges");
   });
 }
+////////////////
