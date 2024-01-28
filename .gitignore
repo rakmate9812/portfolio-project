@@ -1,0 +1,8 @@
+todolist.txt
+dist
+finalDist
+finalDir
+.parcel-cache
+package-lock.json
+node_modules
+.vs
